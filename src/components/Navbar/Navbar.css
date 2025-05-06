@@ -1,0 +1,138 @@
+/* Modern light color palette */
+:root {
+    --primary: #FFFFFF;    /* White background */
+    --secondary: #6366F1;  /* Modern indigo */
+    --accent: #8B5CF6;     /* Purple accent */
+    --text: #1F2937;       /* Dark gray text */
+    --hover: #4F46E5;      /* Darker indigo for hover */
+    --shadow: rgba(0, 0, 0, 0.1);
+    --purple-light: #A78BFA;  /* Light purple for subtle accents */
+    --purple-dark: #7C3AED;   /* Deep purple for emphasis */
+    --blue-light: #818CF8;    /* Light blue for secondary elements */
+    --blue-dark: #4338CA;     /* Deep blue for hover states */
+}
+
+.navbar {
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    width: 100%;
+    box-shadow: 0 2px 8px var(--shadow);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    color: var(--purple-dark);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--blue-dark);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(to right, var(--purple-dark), var(--blue-dark));
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background-color: var(--primary);
+        flex-direction: column;
+        padding: 80px 2rem 2rem;
+        transition: right 0.3s ease;
+        gap: 2rem;
+        box-shadow: -2px 0 8px var(--shadow);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
