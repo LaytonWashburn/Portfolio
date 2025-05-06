@@ -5,10 +5,72 @@
     margin-top: 70px; /* Add margin for fixed navbar */
 }
 
+.story-section {
+    background: var(--primary);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow);
+    padding: 2.5rem;
+    margin-top: 2rem;
+}
+
+.story-section h2 {
+    color: var(--purple-dark);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-content p {
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-note {
+    font-style: italic;
+    color: var(--blue-dark);
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .home-container {
         padding: 1rem;
         margin-top: 60px; /* Adjust margin for mobile navbar */
+    }
+
+    .story-section {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .story-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .story-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
+    }
+
+    .portfolio-note {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
     }
 }

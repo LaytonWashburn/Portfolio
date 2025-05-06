@@ -6,7 +6,6 @@ interface Project {
     title: string;
     description: string;
     technologies: string[];
-    images: string[];
     link?: string;
     github?: string;
 }
@@ -15,47 +14,42 @@ const projects: Project[] = [
     {
         id: 1,
         title: "Big Blue is You",
-        description: "A puzzle game inspired by 'Baba is You' where players manipulate rules to solve puzzles. Built with Unity and C#, featuring custom level design and rule-based gameplay mechanics.",
-        technologies: ["Unity", "C#", "Game Development"],
-        images: ["/images/bigblue1.jpg", "/images/bigblue2.jpg", "/images/bigblue3.jpg"],
-        link: "https://bigblueisyou.com",
-        github: "https://github.com/yourusername/bigblueisyou"
+        description: "A puzzle game inspired by 'Baba is You' where players manipulate rules to solve puzzles. Built with LWJGL and Java, featuring custom level design and rule-based gameplay mechanics.",
+        technologies: ["LWJGL", "Java", "Game Development"],
+        link: "https://github.com/LaytonWashburn/CS5410_BigBlueIsYou",
+        github: "https://github.com/LaytonWashburn/CS5410_BigBlueIsYou"
     },
     {
         id: 2,
         title: "Aggie Tutor",
-        description: "A tutoring platform connecting Texas A&M students with peer tutors. Features include real-time scheduling, video conferencing, and payment processing.",
-        technologies: ["React", "Node.js", "WebRTC", "Stripe"],
-        images: ["/images/aggietutor1.jpg", "/images/aggietutor2.jpg", "/images/aggietutor3.jpg"],
-        link: "https://aggietutor.com",
-        github: "https://github.com/yourusername/aggietutor"
+        description: "A tutoring platform connecting Utah State University students with peer tutors. Features include real-time scheduling, video conferencing, and payment processing.",
+        technologies: ["React", "Node.js", "Tailwind CSS", "MinIO", "Socket.io"],
+        link: "https://github.com/LaytonWashburn/CS4610_Final",
+        github: "https://github.com/LaytonWashburn/CS4610_Final"
     },
     {
         id: 3,
-        title: "Portfolio Website",
-        description: "A modern, responsive portfolio website built with React and TypeScript. Features smooth animations, dark mode, and a clean, professional design.",
-        technologies: ["React", "TypeScript", "CSS3"],
-        images: ["/images/portfolio1.jpg", "/images/portfolio2.jpg", "/images/portfolio3.jpg"],
-        link: "https://laytonwashburn.com",
-        github: "https://github.com/yourusername/portfolio"
+        title: "Python HTML Parser",
+        description: "A python html and css parser, attempting to use Qt as a broswer interface. This is still under development.",
+        technologies: ["Python", "Qt", "html/css"],
+        link: "https://github.com/LaytonWashburn/PythonHTMLParser",
+        github: "https://github.com/LaytonWashburn/PythonHTMLParser"
     },
     {
         id: 4,
-        title: "Task Manager",
-        description: "A full-stack task management application with real-time updates, user authentication, and collaborative features.",
-        technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-        images: ["/images/taskmanager1.jpg", "/images/taskmanager2.jpg", "/images/taskmanager3.jpg"],
-        link: "https://taskmanager.com",
-        github: "https://github.com/yourusername/taskmanager"
+        title: "Rust Game",
+        description: "A game written in Rust, using the Bevy game engine. This is a work in the early stages of development.",
+        technologies: ["Rust", "Bevy"],
+        link: "https://github.com/LaytonWashburn/RustGame",
+        github: "https://github.com/LaytonWashburn/RustGame"
     },
     {
         id: 5,
-        title: "Weather App",
-        description: "A weather forecasting application that provides real-time weather data, forecasts, and interactive maps.",
-        technologies: ["React", "OpenWeather API", "Chart.js"],
-        images: ["/images/weatherapp1.jpg", "/images/weatherapp2.jpg", "/images/weatherapp3.jpg"],
-        link: "https://weatherapp.com",
-        github: "https://github.com/yourusername/weatherapp"
+        title: "Lunar Lander",
+        description: "A lunar lander game. Attempt to land on the moon with a lunar lander.",
+        technologies: ["LWJGL", "Java", "Game Development"],
+        link: "https://github.com/LaytonWashburn/CS5410_Project3_LunarLanding",
+        github: "https://github.com/LaytonWashburn/CS5410_Project3_LunarLanding"
     }
 ];
 

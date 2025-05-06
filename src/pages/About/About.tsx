@@ -10,13 +10,13 @@ export const About = () => {
                         <h3>Work Experience</h3>
                         <ul>
                             <li>
-                                <h4>Software Engineering Intern</h4>
-                                <p>Company Name • 2022-2023</p>
+                                <h4>Tech Intern</h4>
+                                <p>Pacific Northwest National Laboratory • 2023 - Current</p>
                                 <p>Description of responsibilities and achievements</p>
                             </li>
                             <li>
-                                <h4>Web Development Intern</h4>
-                                <p>Company Name • 2021-2022</p>
+                                <h4>DOE SULI Student Intern</h4>
+                                <p>Department of Energy hosted by Pacific Northwest National Laboratory • Summer 2023</p>
                                 <p>Description of responsibilities and achievements</p>
                             </li>
                         </ul>
@@ -28,7 +28,7 @@ export const About = () => {
                                 <h4>Frontend</h4>
                                 <ul>
                                     <li>React</li>
-                                    <li>TypeScript</li>
+                                    <li>JavaScript</li>
                                     <li>HTML/CSS</li>
                                 </ul>
                             </div>
@@ -38,12 +38,14 @@ export const About = () => {
                                     <li>Node.js</li>
                                     <li>Python</li>
                                     <li>SQL</li>
+                                    <li>Flask</li>
+                                    <li>FastAPI</li>
                                 </ul>
                             </div>
                             <div className="skill-category">
                                 <h4>Languages</h4>
                                 <ul>
-                                    <li>C++</li>
+                                    <li>R</li>
                                     <li>JavaScript</li>
                                     <li>Python</li>
                                 </ul>
@@ -62,19 +64,19 @@ export const About = () => {
                             <h4>Utah State University</h4>
                             <p>Bachelor of Science in Computer Science</p>
                             <p>Graduated: 2023</p>
-                            <p>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems</p>
+                            <p>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems, AI / Machine Learning</p>
                         </div>
                     </div>
                     <div className="content-card">
                         <h3>Academic Projects</h3>
                         <ul>
                             <li>
-                                <h4>Project Name</h4>
-                                <p>Description of the project and your role</p>
+                                <h4>Big Blue Is You</h4>
+                                <p> Final project for Technical Game Development based on the game Baba Is You. My role was a developer and manual tester</p>
                             </li>
                             <li>
-                                <h4>Project Name</h4>
-                                <p>Description of the project and your role</p>
+                                <h4>AWaanaCU</h4>
+                                <p>Final project for high performance computing. Used Bresenham's line algorithm to determine if there is a line of sight between two pixels on an input image. My role was a developer and tester. </p>
                             </li>
                         </ul>
                     </div>
@@ -96,8 +98,8 @@ export const About = () => {
                         <h3>Hobbies</h3>
                         <ul>
                             <li>Hiking</li>
-                            <li>Reading</li>
-                            <li>Gaming</li>
+                            <li>Running</li>
+                            <li>Rock Climbing</li>
                         </ul>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ export const Welcome = () => {
                     </div>
                     <div className="info-card">
                         <h2>C++ Enthusiast</h2>
-                        <p>Strong foundation in systems programming</p>
+                        <p>Foundation in systems programming</p>
                     </div>
                 </div>
             </div>
