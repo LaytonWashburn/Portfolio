@@ -9,7 +9,7 @@ export const Home = () => {
                 <h2>My Journey into Computer Science</h2>
                 <div className="story-content">
                     <p>
-                        I am an undergraduate computer science major at Utah State University, passionate about software development, 
+                        I am a recent graduate from Utah State University with a B.S. in Computer Science, passionate about software development, 
                         writing, and continuous learning. While C++ is my favorite programming language, Python and Web development are close seconds.
                     </p>
                     <p>
