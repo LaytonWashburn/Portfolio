@@ -75,7 +75,7 @@ export const About = () => {
                                 <p> Final project for Technical Game Development based on the game Baba Is You. My role was a developer and manual tester</p>
                             </li>
                             <li>
-                                <h4>AWaanaCU</h4>
+                                <h4>AWannaCU</h4>
                                 <p>Final project for high performance computing. Used Bresenham's line algorithm to determine if there is a line of sight between two pixels on an input image. My role was a developer and tester. </p>
                             </li>
                         </ul>
