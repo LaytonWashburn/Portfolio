@@ -8,6 +8,7 @@ export const Welcome = () => {
                 <div className="profile-container">
                     <img src={profilePic} alt="Profile" className="profile-picture" />
                     <h2 className="profile-name">Layton Washburn</h2>
+                    <p>Designed for Mobile and Desktop 😊</p>
                 </div>
                 <h1>Welcome to My Portfolio</h1>
                 <div className="welcome-info">
