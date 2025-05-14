@@ -26,6 +26,13 @@ export const Skills = () => {
                                     <li>Rust</li>
                                 </ul>
                             </div>
+                            <div className="skill-category">
+                                <h4>Future</h4>
+                                <ul>
+                                    <li>C#</li>
+                                    <li>Go</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -63,7 +70,7 @@ export const Skills = () => {
                                 <ul>
                                     <li>Git</li>
                                     <li>Docker</li>
-                                    <li>k8s (in progress)</li>
+                                    <li>k8 (in progress)</li>
                                     <li>Make</li>
                                     <li>CMake</li>
                                     <li>VS Code</li>
