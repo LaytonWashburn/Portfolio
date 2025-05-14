@@ -97,7 +97,7 @@ export const About = () => {
                     <div className="content-card">
                         <h3>Hobbies</h3>
                         <ul>
-                            <li>Hiking</li>
+                            <li>Writing</li>
                             <li>Running</li>
                             <li>Rock Climbing</li>
                         </ul>

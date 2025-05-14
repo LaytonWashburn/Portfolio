@@ -12,7 +12,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-brand">
-                <Link to="/" className="logo">Portfolio</Link>
+                <Link to="/" className="logo" onClick={() => setIsOpen(false)}>Portfolio</Link>
                 <button 
                     className={`hamburger ${isOpen ? 'active' : ''}`} 
                     onClick={toggleMenu}
@@ -25,6 +25,7 @@ export const Navbar = () => {
             </div>
             <div className={`nav-links ${isOpen ? 'active' : ''}`}>
                 <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+                <Link to="/skills" onClick={() => setIsOpen(false)}>Skills</Link>
                 <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
                 <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
             </div>

@@ -1,33 +1,21 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'  
+import { HashRouter, Routes, Route } from 'react-router-dom'  
 import { Home } from './pages/Home/Home.tsx'
 import { Projects } from './pages/Projects/Projects.tsx'
 import { About } from './pages/About/About.tsx'
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Home />
-      },
-      {
-        path: "/projects",
-        element: <Projects />
-      },
-      {
-        path: "/about",
-        element: <About />
-      }
-    ]
-  }
-])
+import { Skills } from './pages/Skills/Skills.tsx'
 
 createRoot(document.getElementById('root')!).render(
-    <RouterProvider router={router} />
+  <HashRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="about" element={<About />} />
+        <Route path="skills" element={<Skills/>} />
+      </Route>
+    </Routes>
+  </HashRouter>
 )
