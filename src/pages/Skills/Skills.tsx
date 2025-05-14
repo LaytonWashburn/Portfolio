@@ -74,6 +74,7 @@ export const Skills = () => {
                                 <h4>Databases</h4>
                                 <ul>
                                     <li>SQL</li>
+                                    <li>PostgreSQL</li>
                                     <li>pgAdmin</li>
                                     <li>Redis</li>
                                 </ul>
