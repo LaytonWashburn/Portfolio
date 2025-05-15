@@ -63,8 +63,8 @@ export const About = () => {
                         <div className="education-item">
                             <h4>Utah State University</h4>
                             <p>Bachelor of Science in Computer Science</p>
-                            <p>Graduated: 2023</p>
-                            <p>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems, AI / Machine Learning</p>
+                            <p>Graduated: April 2025</p>
+                            <p>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems, AI / Machine Learning, and Compilers.</p>
                         </div>
                     </div>
                     <div className="content-card">

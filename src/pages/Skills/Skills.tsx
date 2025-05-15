@@ -86,6 +86,13 @@ export const Skills = () => {
                                     <li>Redis</li>
                                 </ul>
                             </div>
+                            <div className="skill-category">
+                                <h4>Object Storage</h4>
+                                <ul>
+                                    <li>MinIO</li>
+                                    
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className="content-card">
