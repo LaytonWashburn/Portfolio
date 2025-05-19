@@ -95,11 +95,12 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     z-index: 100;
     animation: fadeIn 0.3s ease;
     padding: 2rem;
+    overflow-y: auto;
 }
 
 .details-content {
@@ -110,9 +111,9 @@
     width: 90%;
     position: relative;
     animation: slideUp 0.3s ease;
-    max-height: 90vh;
-    overflow-y: auto;
+    margin: 80px auto;
     border: 2px solid var(--purple-dark);
+    z-index: 101;
 }
 
 .close-button {
@@ -233,7 +234,7 @@
 
     .details-content {
         padding: 1.5rem;
-        margin: 1rem;
+        margin: 60px 1rem;
         width: calc(100% - 2rem);
     }
 
