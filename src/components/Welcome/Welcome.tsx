@@ -1,7 +1,65 @@
+import { useState } from 'react';
 import './Welcome.css'
 import profilePic from '../../assets/profile.jpg'
 
+interface InfoCard {
+    id: number;
+    title: string;
+    description: string;
+    additionalInfo: string;
+    achievements?: string[];
+}
+
+const infoCards: InfoCard[] = [
+    {
+        id: 1,
+        title: "Recent USU Graduate",
+        description: "Fresh perspective with modern education",
+        additionalInfo: "Graduated in April 2025 from Utah State University with a Bachelor's in Computer Science, bringing a fresh perspective and modern education to the tech industry.",
+        achievements: [
+            "Completed comprehensive coursework in Data Structures and, Algorithms, Web Development, and Compilers",
+            "Participated in various team projects and a hackathon",
+            "Maintained a strong academic record while working on personal projects and maintaining a part time internship"
+        ]
+    },
+    {
+        id: 2,
+        title: "2 Years National Laboratory Internship Experience",
+        description: "Working at Pacific Northwest National Laboratory and getting hands-on experience in real-world projects",
+        additionalInfo: "Gained professional experience in web development, devops, and data cleaning.",
+        achievements: [
+            "Worked on scientific and AI applications to deliver users with high quality data products",
+            "Worked with cross-functional teams on complex technical challenges",
+            "Developed and maintained critical software systems"
+        ]
+    },
+    {
+        id: 3,
+        title: "Web Developer",
+        description: "Passionate about creating modern web experiences",
+        additionalInfo: "Focused on becoming a full-stack web developer with expertise in both frontend and backend technologies.",
+        achievements: [
+            "Built responsive and interactive web applications using React and R Shiny",
+            "Implemented RESTful APIs and database solutions using Flask, FastAPI, and SQL",
+            "Created user-friendly interfaces with modern design principles to deliver on both desktop and mobile platforms"
+        ]
+    },
+    {
+        id: 4,
+        title: "C++ / Rust Enthusiast",
+        description: "Foundation in systems programming",
+        additionalInfo: "Strong foundation in systems programming and low-level development, with a particular interest in performance optimization and memory management.",
+        achievements: [
+            "Joined the Bevy Game Engine team as a contributor",
+            "Working on personal projects to improve my skills in low-level systems programming",
+            "Learning memory management and concurrency in Rust and C++"
+        ]
+    }
+];
+
 export const Welcome = () => {
+    const [selectedCard, setSelectedCard] = useState<InfoCard | null>(null);
+
     return (
         <section className="welcome-section">
             <div className="welcome-content">
@@ -12,24 +70,43 @@ export const Welcome = () => {
                 </div>
                 <h1>Welcome to My Portfolio</h1>
                 <div className="welcome-info">
-                    <div className="info-card">
-                        <h2>Recent USU Graduate</h2>
-                        <p>Fresh perspective with modern education</p>
-                    </div>
-                    <div className="info-card">
-                        <h2>2 Years Internship Experience</h2>
-                        <p>Hands-on experience in real-world projects</p>
-                    </div>
-                    <div className="info-card">
-                        <h2>Web Developer Aspirations</h2>
-                        <p>Passionate about creating modern web experiences</p>
-                    </div>
-                    <div className="info-card">
-                        <h2>C++ Enthusiast</h2>
-                        <p>Foundation in systems programming</p>
-                    </div>
+                    {infoCards.map((card) => (
+                        <div 
+                            key={card.id}
+                            className="info-card"
+                            onClick={() => setSelectedCard(card)}
+                        >
+                            <h2>{card.title}</h2>
+                            <p>{card.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
+
+            {selectedCard && (
+                <div className="card-details" onClick={() => setSelectedCard(null)}>
+                    <div className="details-content" onClick={e => e.stopPropagation()}>
+                        <button 
+                            className="close-button"
+                            onClick={() => setSelectedCard(null)}
+                        >
+                            ×
+                        </button>
+                        <h2>{selectedCard.title}</h2>
+                        <p className="details-description">{selectedCard.additionalInfo}</p>
+                        {selectedCard.achievements && (
+                            <div className="achievements">
+                                <h3>Key Achievements</h3>
+                                <ul>
+                                    {selectedCard.achievements.map((achievement, index) => (
+                                        <li key={index}>{achievement}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
         </section>
     )
 } 

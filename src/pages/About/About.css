@@ -32,6 +32,14 @@
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow);
+    border-color: var(--purple-dark);
 }
 
 .content-card h3 {
@@ -41,35 +49,294 @@
     font-weight: 600;
 }
 
-.content-card h4 {
+.card-description {
     color: var(--text);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.content-card p {
-    color: var(--text);
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
-.content-card ul {
+.card-additional-info {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.card-details-preview {
+    margin-top: 1rem;
+}
+
+.detail-preview {
+    margin-bottom: 1rem;
+}
+
+.detail-preview:last-child {
+    margin-bottom: 0;
+}
+
+.detail-preview h4 {
+    color: var(--blue-dark);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.detail-preview ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.content-card li {
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
+.detail-preview li {
+    color: var(--text);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
     position: relative;
+    line-height: 1.4;
 }
 
-.content-card li::before {
+.detail-preview li::before {
     content: "•";
     color: var(--blue-dark);
     position: absolute;
     left: 0;
+}
+
+.detail-preview p {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.more-items {
+    color: var(--blue-dark) !important;
+    font-style: italic;
+    font-size: 0.9rem !important;
+}
+
+/* Modal Styles */
+.card-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 90;
+    animation: fadeIn 0.3s ease;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.details-content {
+    background: var(--primary);
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    margin: 80px auto;
+    border: 2px solid var(--purple-dark);
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text);
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--blue-dark);
+}
+
+.details-content h2 {
+    color: var(--purple-dark);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    padding-right: 2rem;
+}
+
+.details-description {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.details-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.detail-section {
+    background: rgba(167, 139, 250, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--purple-light);
+}
+
+.detail-section h3 {
+    color: var(--blue-dark);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.detail-section p {
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-section li {
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.detail-section li::before {
+    content: "•";
+    color: var(--blue-dark);
+    position: absolute;
+    left: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.disclaimer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.cursor-credit {
+    margin-top: 0.5rem;
+    color: var(--blue-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+        margin-top: 60px;
+    }
+
+    .about-section {
+        padding: 1.5rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .content-card {
+        padding: 1.25rem;
+    }
+
+    .content-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+    }
+
+    .details-content {
+        padding: 1.5rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .details-content h2 {
+        font-size: 1.8rem;
+        padding-right: 1rem;
+    }
+
+    .details-description {
+        font-size: 1rem;
+    }
+
+    .detail-section {
+        padding: 1.25rem;
+    }
+
+    .detail-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 0.5rem;
+    }
+
+    .about-section {
+        padding: 1rem;
+    }
+
+    .section-content {
+        grid-template-columns: 1fr;
+    }
+
+    .content-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-description {
+        font-size: 0.9rem;
+    }
+
+    .details-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .detail-section {
+        padding: 1rem;
+    }
 }
 
 .skills-grid {
@@ -101,14 +368,6 @@
     margin-bottom: 0;
 }
 
-.disclaimer {
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
-    color: var(--text);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 .disclaimer p {
     margin: 0;
     line-height: 1.6;
@@ -121,39 +380,6 @@
     margin-bottom: 0.5rem;
 }
 
-.cursor-credit {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        padding: 1rem;
-        margin-top: 60px; /* Adjust margin for mobile navbar */
-    }
-
-    .about-section {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .about-section h2 {
-        font-size: 1.75rem;
-        margin-bottom: 1.25rem;
-    }
-
-    .section-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .content-card {
-        padding: 1.25rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
-    }
+.bold {
+    font-weight: 600;
 }

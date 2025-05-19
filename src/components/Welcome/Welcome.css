@@ -63,11 +63,14 @@
     border-radius: 12px;
     box-shadow: 0 4px 6px var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--purple-light);
 }
 
 .info-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px var(--shadow);
+    border-color: var(--purple-dark);
 }
 
 .info-card h2 {
@@ -83,12 +86,125 @@
     line-height: 1.5;
 }
 
+/* Modal Styles */
+.card-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn 0.3s ease;
+    padding: 2rem;
+}
+
+.details-content {
+    background: var(--primary);
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 2px solid var(--purple-dark);
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text);
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--blue-dark);
+}
+
+.details-content h2 {
+    color: var(--purple-dark);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    padding-right: 2rem;
+}
+
+.details-description {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.achievements {
+    margin-top: 2rem;
+}
+
+.achievements h3 {
+    color: var(--blue-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements li {
+    color: var(--text);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.achievements li::before {
+    content: "•";
+    color: var(--blue-dark);
+    position: absolute;
+    left: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .welcome-section {
         padding: 1rem;
         min-height: calc(100vh - 60px);
-        margin-top: 60px; /* Adjust margin for mobile navbar */
+        margin-top: 60px;
     }
 
     .profile-picture {
@@ -113,5 +229,47 @@
 
     .info-card {
         padding: 1.25rem;
+    }
+
+    .details-content {
+        padding: 1.5rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .details-content h2 {
+        font-size: 1.8rem;
+        padding-right: 1rem;
+    }
+
+    .details-description {
+        font-size: 1rem;
+    }
+
+    .achievements h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section {
+        padding: 0.5rem;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .welcome-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .info-card p {
+        font-size: 0.9rem;
     }
 } 
