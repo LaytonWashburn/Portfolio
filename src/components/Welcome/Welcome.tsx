@@ -17,6 +17,7 @@ const infoCards: InfoCard[] = [
         description: "Fresh perspective with modern education",
         additionalInfo: "Graduated in April 2025 from Utah State University with a Bachelor's in Computer Science, bringing a fresh perspective and modern education to the tech industry.",
         achievements: [
+            "3.96 / 4.0 GPA",
             "Completed comprehensive coursework in Data Structures and, Algorithms, Web Development, and Compilers",
             "Participated in various team projects and a hackathon",
             "Maintained a strong academic record while working on personal projects and maintaining a part time internship"
