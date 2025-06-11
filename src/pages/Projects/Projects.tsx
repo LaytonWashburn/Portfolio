@@ -29,11 +29,11 @@ const projects: Project[] = [
     },
     {
         id: 3,
-        title: "Python HTML Parser",
-        description: "A python html and css parser, attempting to use Qt as a broswer interface. This is still under development.",
-        technologies: ["Python", "Qt", "html/css"],
-        link: "https://github.com/LaytonWashburn/PythonHTMLParser",
-        github: "https://github.com/LaytonWashburn/PythonHTMLParser"
+        title: "File Compression",
+        description: "A cli tool for file compression in Golang This is a work in the early stages of development.",
+        technologies: ["Golang", "Cobra Cli"],
+        link: "https://github.com/LaytonWashburn/FileCompressionGolang",
+        github: "https://github.com/LaytonWashburn/FileCompressionGolang"
     },
     {
         id: 4,
@@ -50,7 +50,16 @@ const projects: Project[] = [
         technologies: ["LWJGL", "Java", "Game Development"],
         link: "https://github.com/LaytonWashburn/CS5410_Project3_LunarLanding",
         github: "https://github.com/LaytonWashburn/CS5410_Project3_LunarLanding"
+    },
+    {
+        id: 6,
+        title: "Python HTML Parser",
+        description: "A python html and css parser, attempting to use Qt as a broswer interface. This is still under development.",
+        technologies: ["Python", "Qt", "html/css"],
+        link: "https://github.com/LaytonWashburn/PythonHTMLParser",
+        github: "https://github.com/LaytonWashburn/PythonHTMLParser"
     }
+
 ];
 
 export const Projects = () => {
