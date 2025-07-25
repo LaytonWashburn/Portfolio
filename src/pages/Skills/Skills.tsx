@@ -113,8 +113,7 @@ export const Skills = () => {
             </section>
 
             <div className="disclaimer">
-                <p>Designed and developed by Layton Washburn</p>
-                <p className="cursor-credit">Crafted with ❤️ using Cursor</p>
+                <p>Designed and developed by Layton Washburn 2025</p>
             </div>
         </div>
     );

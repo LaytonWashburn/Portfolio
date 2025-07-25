@@ -13,25 +13,28 @@ interface InfoCard {
 const infoCards: InfoCard[] = [
     {
         id: 1,
-        title: "Recent USU Graduate",
-        description: "Fresh perspective with modern education",
+        title: "2+ Years Software Engineering National Laboratory Internship Experience",
+        description: "Working at Pacific Northwest National Laboratory and getting hands-on experience in real-world projects",
+        additionalInfo: "Gained professional experience in web development, devops, and data cleaning.",
+        achievements: [
+            "Full-stack AI and traditional web development, focusing on scalability and performance",
+            "DevOps practices including CI/CD pipelines and containerization",
+            "Optimized API endpoint to scale to large inputs",
+            "Worked on scientific and AI applications to deliver users with high quality data products",
+            "Worked with cross-functional teams on complex technical challenges",
+            "Developed and maintained critical software systems"
+        ]
+    },
+    {
+        id: 2,
+        title: "B.S. in Computer Science",
+        description: "Fresh perspective with modern education. Coursework in Modern Web Development, High-Performance Computing, Artificial Intelligence, Machine Learning, Data Structures, Algorithms, Web Development, and Compilers.",
         additionalInfo: "Graduated in April 2025 from Utah State University with a Bachelor's in Computer Science, bringing a fresh perspective and modern education to the tech industry.",
         achievements: [
             "3.96 / 4.0 GPA",
             "Completed comprehensive coursework in Data Structures and, Algorithms, Web Development, and Compilers",
             "Participated in various team projects and a hackathon",
             "Maintained a strong academic record while working on personal projects and maintaining a part time internship"
-        ]
-    },
-    {
-        id: 2,
-        title: "2 Years National Laboratory Internship Experience",
-        description: "Working at Pacific Northwest National Laboratory and getting hands-on experience in real-world projects",
-        additionalInfo: "Gained professional experience in web development, devops, and data cleaning.",
-        achievements: [
-            "Worked on scientific and AI applications to deliver users with high quality data products",
-            "Worked with cross-functional teams on complex technical challenges",
-            "Developed and maintained critical software systems"
         ]
     },
     {
