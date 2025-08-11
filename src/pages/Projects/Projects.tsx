@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { VideoDemo } from './VideoDemo';
 import './Projects.css'
 
 interface Project {
@@ -8,6 +9,7 @@ interface Project {
     technologies: string[];
     link?: string;
     github?: string;
+    video?: string
 }
 
 const projects: Project[] = [
@@ -23,7 +25,7 @@ const projects: Project[] = [
         id: 2,
         title: "Aggie Tutor",
         description: "A tutoring platform connecting Utah State University students with peer tutors. Features include real-time scheduling, video conferencing, and payment processing.",
-        technologies: ["React", "Node.js", "Tailwind CSS", "MinIO", "Socket.io"],
+        technologies: ["React.js", "Node.js", "Tailwind CSS", "MinIO", "Socket.io"],
         link: "https://github.com/LaytonWashburn/CS4610_Final",
         github: "https://github.com/LaytonWashburn/CS4610_Final"
     },
@@ -58,6 +60,18 @@ const projects: Project[] = [
         technologies: ["Python", "Qt", "html/css"],
         link: "https://github.com/LaytonWashburn/PythonHTMLParser",
         github: "https://github.com/LaytonWashburn/PythonHTMLParser"
+    },
+    {
+        id: 7,
+        title: "Winter AI",
+        description: "Platform to test new features and technologies such as AI/ML and Three.js.",
+        technologies: ["React.js", "TypeScript", "Vite", "Vitest", 
+                       "SearXNG", "FastAPI", "Pytest", "Postgres", 
+                       "Prometheus", "Promtail", "Loki", "Grafana",
+                        "Docker", "Github Actions", "Continuous Integration (CI)"],
+        link: "https://github.com/LaytonWashburn/WinterAI",
+        github: "https://github.com/LaytonWashburn/WinterAI",
+        video: "./public/videos/winterai_demo.mp4"
     }
 
 ];
@@ -65,6 +79,7 @@ const projects: Project[] = [
 export const Projects = () => {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [showVideo, setShowVideo] = useState(false);
 
     const nextProject = () => {
         setCurrentProjectIndex((prev) => 
@@ -106,7 +121,33 @@ export const Projects = () => {
                                 <div className="project-header">
                                     <h3>{project.title}</h3>
                                     <div className="project-links">
-                                        {project.link && (
+                                        {project.video ? (
+                                            <>
+                                                <button
+                                                className="project-link"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setShowVideo(true);  // Assuming you have this state to toggle modal
+                                                }}
+                                                >
+                                                Live Demo
+                                                </button>
+                                                {showVideo && (
+                                                <VideoDemo videoUrl={project.video} onClose={() => setShowVideo(false)} />
+                                                )}
+                                            </>
+                                            ) : project.link && (
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="project-link"
+                                                onClick={(e) => e.stopPropagation()}
+                                            >
+                                                Live Demo
+                                            </a>
+                                            )}
+                                        {/* {project.link && (
                                             <a 
                                                 href={project.link} 
                                                 target="_blank" 
@@ -116,7 +157,7 @@ export const Projects = () => {
                                             >
                                                 Live Demo
                                             </a>
-                                        )}
+                                        )} */}
                                         {project.github && (
                                             <a 
                                                 href={project.github} 
