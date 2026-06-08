@@ -13,7 +13,7 @@ interface InfoCard {
 const infoCards: InfoCard[] = [
     {
         id: 1,
-        title: "2+ Years Software Engineering National Laboratory Internship Experience",
+        title: "3+ Years Software Engineering National Laboratory Internship Experience",
         description: "Working at Pacific Northwest National Laboratory and getting hands-on experience in real-world projects",
         additionalInfo: "Gained professional experience in web development, devops, and data cleaning.",
         achievements: [
